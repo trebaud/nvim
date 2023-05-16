@@ -18,6 +18,6 @@ end
 
 vim.cmd([[autocmd TermOpen * setlocal nospell]])
 vim.cmd([[autocmd TermOpen,BufEnter term://* startinsert]])
-vim.cmd([[tnoremap <Esc>q <C-\><C-n>]])
+vim.cmd([[tnoremap <A-w> <C-\><C-n>]])
 
 overwrite()

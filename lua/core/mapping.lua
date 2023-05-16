@@ -8,12 +8,16 @@ local def_map = {
   -- Vim map
   ['n|<C-x>k'] = map_cmd('Bd'):with_noremap():with_silent(),
   ['n|<C-y>'] = map_cmd('%y +'), -- yank file
-  ['n|]b'] = map_cmd('bp'):with_noremap(),
-  ['n|[b'] = map_cmd('bn'):with_noremap(),
+  ['n|<C-[>'] = map_cmd('bp'):with_noremap(),
+  ['n|<C-]>'] = map_cmd('bn'):with_noremap(),
   -- ["n|<Space>cw"] = map_cmd([[silent! keeppatterns %substitute/\s\+$//e]]):with_noremap():with_silent(),
   ['n|<A-[>'] = map_cmd('vertical resize -5'):with_silent(),
   ['n|<A-]>'] = map_cmd('vertical resize +5'):with_silent(),
   ['n|<C-q>'] = map_cmd('wq'),
+  ['n|<C-h>'] = map_key('<C-w>h'):with_noremap(),
+  ['n|<C-j>'] = map_key('<C-w>j'):with_noremap(),
+  ['n|<C-k>'] = map_key('<C-w>k'):with_noremap(),
+  ['n|<C-l>'] = map_key('<C-w>l'):with_noremap(),
   -- Insert
   -- ["i|<C-w>"]      = map_cmd('<C-[>diwa'):with_noremap(),
   -- ["i|<C-h>"] = map_key("<BS>"):with_noremap(), -- see luasnip

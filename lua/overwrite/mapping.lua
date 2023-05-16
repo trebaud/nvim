@@ -54,7 +54,7 @@ local keys = {
 
   ["n|<Leader>bp"] = map_cmd("BufferLinePick"):with_noremap():with_silent(),
 
-  ["n|<C-k>"] = map_cmd("v:lua.ctrl_k()"):with_silent():with_expr(),
+  -- ["n|<C-k>"] = map_cmd("v:lua.ctrl_k()"):with_silent():with_expr(),
   ['xon|<Space>.'] = map_func(function() require('tsht').nodes()end):with_desc('tree hopper'),
   ['xon|<Sapce>]'] = map_func(function() require('tsht').move({side = "end"})end):with_desc('tree hopper'),
   ['xon|<Space>['] = map_func(function() require('tsht').move({side = "start"})end):with_desc('tree hopper'),

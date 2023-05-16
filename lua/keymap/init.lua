@@ -54,7 +54,7 @@ local plug_map = {
   ['n|<Space>wl'] = map_func(function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end):with_desc('list workspace folder'),
-  -- ["n|<Leader>F"] = map_cmd('NvimTreeFindFile'):with_noremap():with_silent(),
+  ["n|<Space>e"] = map_cmd('NvimTreeToggle'):with_noremap():with_silent(),
   -- Plugin MarkdownPreview
   ['n|<Leader>om'] = map_cmd('MarkdownPreview'):with_noremap():with_silent(),
   -- Plugin DadbodUI
