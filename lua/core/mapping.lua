@@ -36,6 +36,7 @@ local def_map = {
   ['c|<C-d>'] = map_key('<Del>'):with_noremap(),
   ['c|<C-h>'] = map_key('<BS>'):with_noremap(),
   ['c|<C-t>'] = map_key([[<C-R>=expand("%:p:h") . "/" <CR>]]):with_noremap(),
+  ['v|e'] = map_cmd([['<,'>t'>|sil'[,']!bash <CR>]]):with_noremap(),
 }
 
 local os_map = {

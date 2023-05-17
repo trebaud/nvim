@@ -43,7 +43,7 @@ return function(use)
       {'tzachar/cmp-fuzzy-buffer', lazy = true, dependencies = {'tzachar/fuzzy.nvim'}},
       { 'dmitmel/cmp-cmdline-history', lazy = true },
       -- { "tzachar/cmp-tabnine", build = "./install.sh", lazy = true, config = conf.tabnine},
-      { 'hrsh7th/cmp-copilot', lazy = true },
+      -- { 'hrsh7th/cmp-copilot', lazy = true },
       { 'hrsh7th/cmp-emoji', lazy = true },
       { 'ray-x/cmp-treesitter', dev = (plugin_folder():find('github') ~= nil), lazy = true },
       { 'hrsh7th/cmp-nvim-lsp', lazy = true },
@@ -143,30 +143,30 @@ return function(use)
     end,
   })
 
-  use({
-    'github/copilot.vim',
-    lazy = true,
-    event = 'InsertEnter',
-    init = function()
-      -- vim.api.nvim_set_keymap("n", "<C-=>", [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true })
-      -- vim.api.nvim_set_keymap("i", "<C-=>", [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true })
-
-      vim.g.copilot_filetypes = {
-        ['*'] = true,
-        gitcommit = false,
-        NeogitCommitMessage = false,
-      }
-      vim.cmd([[
-      imap <silent><script><expr> <C-j> copilot#Accept()
-      let g:copilot_no_tab_map = v:true
-      let g:copilot_assume_mapped = v:true
-      let g:copilot_tab_fallback = ""
-    ]])
-    end,
-  })
-  use({
-    'Exafunction/codeium.vim',
-    lazy = true,
-    -- event = 'InsertEnter',
-  })
+  -- use({
+  --   'github/copilot.vim',
+  --   lazy = true,
+  --   event = 'InsertEnter',
+  --   init = function()
+  --     -- vim.api.nvim_set_keymap("n", "<C-=>", [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true })
+  --     -- vim.api.nvim_set_keymap("i", "<C-=>", [[copilot#Accept("\<CR>")]], { silent = true, script = true, expr = true })
+  --
+  --     vim.g.copilot_filetypes = {
+  --       ['*'] = true,
+  --       gitcommit = false,
+  --       NeogitCommitMessage = false,
+  --     }
+  --     vim.cmd([[
+  --     imap <silent><script><expr> <C-j> copilot#Accept()
+  --     let g:copilot_no_tab_map = v:true
+  --     let g:copilot_assume_mapped = v:true
+  --     let g:copilot_tab_fallback = ""
+  --   ]])
+  --   end,
+  -- })
+  -- use({
+  --   'Exafunction/codeium.vim',
+  --   lazy = true,
+  --   -- event = 'InsertEnter',
+  -- })
 end

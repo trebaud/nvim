@@ -119,7 +119,7 @@ function config.nvim_cmp()
           spell = ' 暈',
           emoji = 'ﲃ',
           -- copilot = "🤖",
-          cmp_tabnine = '🤖',
+          -- cmp_tabnine = '🤖',
           look = '﬜',
         })[entry.source.name]
         return vim_item
