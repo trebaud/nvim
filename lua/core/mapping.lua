@@ -8,8 +8,6 @@ local def_map = {
   -- Vim map
   ['n|<C-x>k'] = map_cmd('Bd'):with_noremap():with_silent(),
   ['n|<C-y>'] = map_cmd('%y +'), -- yank file
-  ['n|<C-[>'] = map_cmd('bp'):with_noremap(),
-  ['n|<C-]>'] = map_cmd('bn'):with_noremap(),
   -- ["n|<Space>cw"] = map_cmd([[silent! keeppatterns %substitute/\s\+$//e]]):with_noremap():with_silent(),
   ['n|<A-[>'] = map_cmd('vertical resize -5'):with_silent(),
   ['n|<A-]>'] = map_cmd('vertical resize +5'):with_silent(),
